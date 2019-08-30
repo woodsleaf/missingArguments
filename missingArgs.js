@@ -3,3 +3,9 @@ const required = () => {throw new Error('Missing parameter')};
 const add = (a = required(), b = required()) => a + b;
 add(1, 2) //3
 add(1) // Error: Missing parameter.
+
+/*
+В примере мы задаём функцию required() как значение по умолчанию для
+ параметров a и b. Это означает, что если a или b не будут переданы функции
+  при вызове, будет вызвана функция required() и мы получим сообщение об ошибке.
+*/
